@@ -1,0 +1,21 @@
+{
+  "name": "Locale",
+  "homepage": "https://github.com/jfehrman/locale",
+  "authors": [
+    "Joseph Fehrman <joseph.fehrman@gmail.com>"
+  ],
+  "description": "Javascript location function that return a promise chain with a device's current location.",
+  "main": "/src/locale.js",
+  "keywords": [
+    "mircoframework",
+    "micorlibrary",
+    "javascript",
+    "location",
+    "promise",
+    "gps",
+    "position",
+    "latitude",
+    "longitude"
+  ],
+  "license": "MIT"
+}
