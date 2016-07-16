@@ -14,11 +14,17 @@ function locale(){
     this.latitude = latitude;
   }
   
+  var geo_options = {
+    enableHighAccuracy: true, 
+    maximumAge        : 30000, 
+    timeout           : 27000
+  };
+  
   return new Promise(function(resolve, reject){
       // Evaluate if the browser supports GPS location.
       if(navigator.geolocation){
         // Get the current location.
-        navigator.geolocation.watchPosition(locationSuccess, locationFailed);
+        navigator.geolocation.getCurrentPosition(locationSuccess, locationFailed, geo_options);
       }else{
         // Evaluate that the browser does not support GPS location show the following error message.
         reject(Error("Can not locate device's location.  Browser does not support GPS locations."));
