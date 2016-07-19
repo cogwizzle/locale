@@ -11,6 +11,15 @@ deviceLocation.then(function(location){
    console.log("lon: " + location.longitude + ", lat: " location.latitude); 
 });
 ```
+Returns the devices location with the default options.
+
+```
+var deviceLocation = locale({enableHighAccuracy : false});
+deviceLocation.then(function(location){
+   console.log("lon: " + location.longitude + ", lat: " location.latitude); 
+});
+```
+Returns the devices location with the non default option enableHighAccuracy = false.
 
 ## License
 The MIT License
