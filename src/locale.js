@@ -1,24 +1,28 @@
 /**
  * Retrieves the devices location.
+ * @see extend
  * 
  * @author Joseph Fehrman
  * @since 07/09/2016
  * @return Promise chain representing coordinates.
  */
-function locale(){
+function locale(options){
   /**
    * Private object designed to house coordinates.
    */
-  var Location = function(latitude, longitude){
+  var Location = function(latitude, longitude , options){
     this.longitude = longitude;
     this.latitude = latitude;
+    this.options = options;
   }
   
-  var geo_options = {
+  this.geo_options = {
     enableHighAccuracy: true, 
     maximumAge        : 30000, 
     timeout           : 27000
   };
+  
+  extend(geo_options, options);
   
   return new Promise(function(resolve, reject){
       // Evaluate if the browser supports GPS location.
@@ -35,7 +39,7 @@ function locale(){
       * Private function for successful geolocation queries.
       */
       function locationSuccess(position){
-        resolve(new Location(position.coords.latitude, position.coords.longitude));
+        resolve(new Location(position.coords.latitude, position.coords.longitude, geo_options));
       }
       
       /**

@@ -17,5 +17,8 @@
     "latitude",
     "longitude"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "Extend": "https://github.com/jfehrman/extend.git#d61bb42a065c40519214ec0f21facc379e0ff0c5"
+  }
 }
