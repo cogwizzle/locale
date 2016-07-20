@@ -1,7 +1,7 @@
 /**
  * Test the locale microlibrary.
  * 
- * @author Joseph Fehrman, Phillip Thomas
+ * @author Joseph Fehrman
  * @since 07/16/2016
  */
 QUnit.module("Locale");
